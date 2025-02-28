@@ -130,6 +130,11 @@ type Props = {|
     eventsBasedObjectName: string,
     variantName: string
   ) => void,
+  onDeleteEventsBasedObjectVariant: (
+    eventsFunctionsExtension: gdEventsFunctionsExtension,
+    eventBasedObject: gdEventsBasedObject,
+    variant: gdEventsBasedObjectVariant
+  ) => void,
 
   // Preview:
   hotReloadPreviewButtonProps: HotReloadPreviewButtonProps,
@@ -2121,6 +2126,9 @@ export default class SceneEditor extends React.Component<Props, State> {
                         openBehaviorEvents={this.props.openBehaviorEvents}
                         onOpenEventBasedObjectEditor={
                           this.props.onOpenEventBasedObjectEditor
+                        }
+                        onDeleteEventsBasedObjectVariant={
+                          this.props.onDeleteEventsBasedObjectVariant
                         }
                       />
                     )}
