@@ -280,6 +280,7 @@ class LabelTreeViewItemContent implements TreeViewItemContent {
               id: rightButton.id,
               label: i18n._(rightButton.label),
               click: rightButton.click,
+              enabled: rightButton.enabled,
             }
           : null,
         ...(buildMenuTemplateFunction ? buildMenuTemplateFunction() : []),
