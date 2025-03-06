@@ -1915,15 +1915,30 @@ const VariablesList = React.forwardRef<Props, VariablesListInterface>(
                         <Column noMargin expand justifyContent="center">
                           {props.emptyPlaceholderTitle &&
                           props.emptyPlaceholderDescription ? (
-                            <EmptyPlaceholder
-                              title={props.emptyPlaceholderTitle}
-                              description={props.emptyPlaceholderDescription}
-                              actionLabel={<Trans>Add a variable</Trans>}
-                              helpPagePath={props.helpPagePath || undefined}
-                              tutorialId="intermediate-advanced-variables"
-                              onAction={addVariable}
-                              actionButtonId="add-variable"
-                            />
+                            props.isListLocked ? (
+                              <Column>
+                                <Text size="block-title" align="center">
+                                  {<Trans>No variable</Trans>}
+                                </Text>
+                                <Text align="center" noMargin>
+                                  {
+                                    <Trans>
+                                      There is no variable to set up.
+                                    </Trans>
+                                  }
+                                </Text>
+                              </Column>
+                            ) : (
+                              <EmptyPlaceholder
+                                title={props.emptyPlaceholderTitle}
+                                description={props.emptyPlaceholderDescription}
+                                actionLabel={<Trans>Add a variable</Trans>}
+                                helpPagePath={props.helpPagePath || undefined}
+                                tutorialId="intermediate-advanced-variables"
+                                onAction={addVariable}
+                                actionButtonId="add-variable"
+                              />
+                            )
                           ) : null}
                           {props.compactEmptyPlaceholderText && (
                             <Line justifyContent="center">
@@ -1933,7 +1948,11 @@ const VariablesList = React.forwardRef<Props, VariablesListInterface>(
                                 align="center"
                                 noMargin
                               >
-                                {props.compactEmptyPlaceholderText}
+                                {props.isListLocked ? (
+                                  <Trans>There is no variable to set up.</Trans>
+                                ) : (
+                                  props.compactEmptyPlaceholderText
+                                )}
                               </Text>
                             </Line>
                           )}
