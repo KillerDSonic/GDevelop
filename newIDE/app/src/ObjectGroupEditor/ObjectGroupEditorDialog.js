@@ -110,7 +110,8 @@ const ObjectGroupEditorDialog = ({
   );
 
   return !editedObjectGroup ||
-    editedObjectGroup.getAllObjectsNames().size() === 0 ? (
+    (editedObjectGroup.getAllObjectsNames().size() === 0 &&
+      !isObjectListLocked) ? (
     <NewObjectGroupEditorDialog
       project={project}
       projectScopedContainersAccessor={projectScopedContainersAccessor}
