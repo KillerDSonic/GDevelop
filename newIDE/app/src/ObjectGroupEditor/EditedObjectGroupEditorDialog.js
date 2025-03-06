@@ -29,6 +29,7 @@ type Props = {|
   initialTab: ?ObjectGroupEditorTab,
   onComputeAllVariableNames?: () => Array<string>,
   isVariableListLocked: boolean,
+  isObjectListLocked: boolean,
 |};
 
 const EditedObjectGroupEditorDialog = ({
@@ -42,6 +43,7 @@ const EditedObjectGroupEditorDialog = ({
   initialTab,
   onComputeAllVariableNames,
   isVariableListLocked,
+  isObjectListLocked,
 }: Props) => {
   const forceUpdate = useForceUpdate();
   const {
@@ -172,6 +174,7 @@ const EditedObjectGroupEditorDialog = ({
           groupObjectNames={group.getAllObjectsNames().toJSArray()}
           onObjectAdded={addObject}
           onObjectRemoved={removeObject}
+          isObjectListLocked={isObjectListLocked}
         />
       )}
       {currentTab === 'variables' && (

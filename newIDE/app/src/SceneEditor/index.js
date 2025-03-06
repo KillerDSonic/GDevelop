@@ -2180,6 +2180,7 @@ export default class SceneEditor extends React.Component<Props, State> {
                     );
                   }}
                   isVariableListLocked={isCustomVariant}
+                  isObjectListLocked={isCustomVariant}
                 />
               )}
               {this.state.setupGridOpen && (
