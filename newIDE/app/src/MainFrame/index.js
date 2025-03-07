@@ -3931,6 +3931,7 @@ const MainFrame = (props: Props) => {
                     onDeleteEventsBasedObjectVariant: deleteEventsBasedObjectVariant,
                     onEventsBasedObjectChildrenEdited: onEventsBasedObjectChildrenEdited,
                     onSceneObjectEdited: onSceneObjectEdited,
+                    onExtensionInstalled: onExtensionInstalled,
                     gamesList,
                   })}
                 </ErrorBoundary>

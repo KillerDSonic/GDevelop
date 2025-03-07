@@ -153,6 +153,7 @@ export class SceneEditorContainer extends React.Component<RenderEditorContainerP
         onDeleteEventsBasedObjectVariant={
           this.props.onDeleteEventsBasedObjectVariant
         }
+        onExtensionInstalled={this.props.onExtensionInstalled}
         onObjectEdited={objectWithContext =>
           this.props.onSceneObjectEdited(layout, objectWithContext)
         }

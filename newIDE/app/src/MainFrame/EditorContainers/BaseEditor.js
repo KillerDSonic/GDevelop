@@ -158,6 +158,7 @@ export type RenderEditorContainerProps = {|
     eventBasedObject: gdEventsBasedObject,
     variant: gdEventsBasedObjectVariant
   ) => void,
+  onExtensionInstalled: (extensionName: string) => void,
 |};
 
 export type RenderEditorContainerPropsWithRef = {|

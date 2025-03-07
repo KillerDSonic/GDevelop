@@ -27,6 +27,7 @@ export const Default = () => (
       onUpdateBehaviorsSharedData={() => {}}
       openBehaviorEvents={() => action('Open behavior events')}
       onBehaviorsUpdated={() => {}}
+      onExtensionInstalled={action('extension installed')}
       isListLocked={false}
     />
   </SerializedObjectDisplay>
@@ -42,6 +43,7 @@ export const WithoutAnyBehaviors = () => (
       onUpdateBehaviorsSharedData={() => {}}
       openBehaviorEvents={() => action('Open behavior events')}
       onBehaviorsUpdated={() => {}}
+      onExtensionInstalled={action('extension installed')}
       isListLocked={false}
     />
   </SerializedObjectDisplay>
@@ -57,6 +59,7 @@ export const Locked = () => (
       onUpdateBehaviorsSharedData={() => {}}
       openBehaviorEvents={() => action('Open behavior events')}
       onBehaviorsUpdated={() => {}}
+      onExtensionInstalled={action('extension installed')}
       isListLocked={true}
     />
   </SerializedObjectDisplay>
@@ -72,6 +75,7 @@ export const LockedWithoutAnyBehaviors = () => (
       onUpdateBehaviorsSharedData={() => {}}
       openBehaviorEvents={() => action('Open behavior events')}
       onBehaviorsUpdated={() => {}}
+      onExtensionInstalled={action('extension installed')}
       isListLocked={true}
     />
   </SerializedObjectDisplay>

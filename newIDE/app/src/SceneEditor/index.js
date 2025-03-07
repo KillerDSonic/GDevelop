@@ -135,6 +135,7 @@ type Props = {|
     eventBasedObject: gdEventsBasedObject,
     variant: gdEventsBasedObjectVariant
   ) => void,
+  onExtensionInstalled: (extensionName: string) => void,
 
   // Preview:
   hotReloadPreviewButtonProps: HotReloadPreviewButtonProps,
@@ -2068,6 +2069,7 @@ export default class SceneEditor extends React.Component<Props, State> {
                 isActive={isActive}
                 onOpenedEditorsChanged={this.updateToolbar}
                 lastSelectionType={this.state.lastSelectionType}
+                onExtensionInstalled={this.props.onExtensionInstalled}
               />
               <I18n>
                 {({ i18n }) => (
@@ -2134,6 +2136,7 @@ export default class SceneEditor extends React.Component<Props, State> {
                         onDeleteEventsBasedObjectVariant={
                           this.props.onDeleteEventsBasedObjectVariant
                         }
+                        onExtensionInstalled={this.props.onExtensionInstalled}
                         isBehaviorListLocked={isCustomVariant}
                         isVariableListLocked={isCustomVariant}
                       />

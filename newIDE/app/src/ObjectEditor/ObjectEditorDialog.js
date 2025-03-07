@@ -70,6 +70,7 @@ type Props = {|
     eventBasedObject: gdEventsBasedObject,
     variant: gdEventsBasedObjectVariant
   ) => void,
+  onExtensionInstalled: (extensionName: string) => void,
   isBehaviorListLocked: boolean,
   isVariableListLocked: boolean,
 |};
@@ -102,6 +103,7 @@ const InnerDialog = (props: InnerDialogProps) => {
     onComputeAllVariableNames,
     onOpenEventBasedObjectEditor,
     onDeleteEventsBasedObjectVariant,
+    onExtensionInstalled,
     isBehaviorListLocked,
     isVariableListLocked,
   } = props;
@@ -323,6 +325,7 @@ const InnerDialog = (props: InnerDialogProps) => {
           onBehaviorsUpdated={notifyOfChange}
           openBehaviorEvents={askConfirmationAndOpenBehaviorEvents}
           isListLocked={isBehaviorListLocked}
+          onExtensionInstalled={onExtensionInstalled}
         />
       )}
       {currentTab === 'variables' && (

@@ -215,6 +215,7 @@ type Props = {|
 
   objects: Array<gdObject>,
   onEditObject: (object: gdObject, initialTab: ?ObjectEditorTab) => void,
+  onExtensionInstalled: (extensionName: string) => void,
   isVariableListLocked: boolean,
   isBehaviorListLocked: boolean,
 |};
@@ -234,6 +235,7 @@ export const CompactObjectPropertiesEditor = ({
   historyHandler,
   objects,
   onEditObject,
+  onExtensionInstalled,
   isVariableListLocked,
   isBehaviorListLocked,
 }: Props) => {
@@ -339,6 +341,7 @@ export const CompactObjectPropertiesEditor = ({
     onUpdate: forceUpdate,
     onBehaviorsUpdated: forceUpdate,
     onUpdateBehaviorsSharedData,
+    onExtensionInstalled,
   });
 
   const allVisibleBehaviors = object

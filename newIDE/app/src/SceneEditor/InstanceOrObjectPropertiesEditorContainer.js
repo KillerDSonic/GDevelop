@@ -43,6 +43,7 @@ type Props = {|
   onEditObject: (object: gdObject, initialTab: ?ObjectEditorTab) => void,
   onUpdateBehaviorsSharedData: () => void,
   isBehaviorListLocked: boolean,
+  onExtensionInstalled: (extensionName: string) => void,
 
   // For instances:
   instances: Array<gdInitialInstance>,
@@ -84,6 +85,7 @@ export const InstanceOrObjectPropertiesEditorContainer = React.forwardRef<
     eventsFunctionsExtension,
     onUpdateBehaviorsSharedData,
     isBehaviorListLocked,
+    onExtensionInstalled,
 
     // For instances:
     instances,
@@ -117,6 +119,7 @@ export const InstanceOrObjectPropertiesEditorContainer = React.forwardRef<
           eventsFunctionsExtension={eventsFunctionsExtension}
           onUpdateBehaviorsSharedData={onUpdateBehaviorsSharedData}
           isBehaviorListLocked={isBehaviorListLocked}
+          onExtensionInstalled={onExtensionInstalled}
           {...commonProps}
         />
       ) : (

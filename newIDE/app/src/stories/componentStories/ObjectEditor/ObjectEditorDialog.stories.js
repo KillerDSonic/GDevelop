@@ -48,6 +48,7 @@ export const CustomObject = () => (
       onDeleteEventsBasedObjectVariant={() =>
         action('Delete event-based object variant')
       }
+      onExtensionInstalled={action('extension installed')}
       isBehaviorListLocked={false}
       isVariableListLocked={false}
     />
@@ -87,6 +88,7 @@ export const StandardObject = () => (
       onDeleteEventsBasedObjectVariant={() =>
         action('Delete event-based object variant')
       }
+      onExtensionInstalled={action('extension installed')}
       isBehaviorListLocked={false}
       isVariableListLocked={false}
     />
@@ -126,6 +128,7 @@ export const LockedStandardObject = () => (
       onDeleteEventsBasedObjectVariant={() =>
         action('Delete event-based object variant')
       }
+      onExtensionInstalled={action('extension installed')}
       isBehaviorListLocked={true}
       isVariableListLocked={true}
     />
